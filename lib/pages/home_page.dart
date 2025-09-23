@@ -1,5 +1,6 @@
 // lib/pages/home_page.dart
 
+import 'package:bukuku/main.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'login_page.dart';
@@ -36,24 +37,26 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 40),
-            ElevatedButton(
+            ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const ProductPage()),
                 );
               },
-              child: const Text('Lihat Produk'),
+              icon: Icon(Icons.book, color: secondaryColor),
+              label: const Text('Lihat Produk'),
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
+            ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const RiwayatPage()),
                 );
               },
-              child: const Text('Lihat Riwayat Transaksi'),
+              icon: const Icon(Icons.history, color: secondaryColor),
+              label: const Text('Lihat Riwayat Transaksi'),
             ),
           ],
         ),
