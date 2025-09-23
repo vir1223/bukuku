@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const ProductPage()),
                 );
               },
-              icon: Icon(Icons.book, color: secondaryColor),
+              icon: Icon(Icons.book, color: primaryColor),
               label: const Text('Lihat Produk'),
             ),
             const SizedBox(height: 20),
@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const RiwayatPage()),
                 );
               },
-              icon: const Icon(Icons.history, color: secondaryColor),
+              icon: const Icon(Icons.history, color: primaryColor),
               label: const Text('Lihat Riwayat Transaksi'),
             ),
           ],
