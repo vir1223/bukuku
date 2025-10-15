@@ -1,16 +1,39 @@
-# bukuku
+# Bukuku App
 
-A new Flutter project.
+## Setup Instructions
 
-## Getting Started
+### Firebase Configuration
 
-This project is a starting point for a Flutter application.
+This app uses Firebase for backend services. To set up Firebase:
 
-A few resources to get you started if this is your first Flutter project:
+1. Create a Firebase project at https://console.firebase.google.com/
+2. Enable the required services (e.g., Authentication, Firestore, Storage)
+3. Generate API keys and configuration for each platform
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### Android Setup
+- Download the `google-services.json` file from Firebase console
+- Replace the placeholder values in `android/app/google-services.json` with your actual Firebase configuration
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### iOS Setup
+- Download the `GoogleService-Info.plist` file from Firebase console
+- Place it in the `ios/Runner/` directory
+
+#### Web Setup
+- The web configuration is handled in `lib/firebase_options.dart`
+
+#### Firebase Options
+- Update `lib/firebase_options.dart` with your actual Firebase API keys and configuration values
+- Replace all `YOUR_*` placeholders with real values from your Firebase project
+
+### Environment Variables
+- For production, consider using environment variables or a secure configuration management system
+- Never commit real API keys to version control
+
+### Running the App
+1. Ensure all Firebase configurations are set up correctly
+2. Run `flutter pub get` to install dependencies
+3. Run `flutter run` to start the app
+
+### Security Note
+- The `.gitignore` file is configured to exclude sensitive Firebase configuration files
+- Always keep API keys secure and never expose them in public repositories
